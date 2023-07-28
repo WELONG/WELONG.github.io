@@ -19,7 +19,21 @@
             color: #fb4d44;
             margin-left: 16px;
             font-size: 72px;
-
+            padding: 0px;
+        }
+        h2 {
+            margin-left: 16px;
+            font-size: 36px;
+        }
+        h3 {
+            margin-left: 16px;
+            font-size: 28px;
+        }
+        h4 {
+            margin-left: 16px;
+            font-size: 22px;
+            font-weight: normal;
+            color: #656565;
         }
         a {
             text-decoration: none;
@@ -114,7 +128,17 @@
     </style>
 </head>
 <body>
-    <h1>美团超级券包精选</h1>
+    <h1>美团外卖超级券包精选</h1>
+    <h2>优惠可叠加·随时退</h2>
+    
+    <h4>·可叠加会员红包、门店满减、折扣商品、配送活动等，具体以使用时页面展示为准。</h4>
+    
+    <h4>·随时退：购买超值券包后，未使用且未赠送的券支持随时退款。到期未使用的券支持自动退款，根据购买时实际支付金额以及券剩余张数，按比例退回到购券时的原支付账户中。</h4>
+    
+    
+    <h2>使用步骤：</h2>
+    <h3>购买券包->代金券/红包卡券->用券定外卖</h3>
+
     <div id="productList"></div>
     <script>
 
@@ -122,38 +146,215 @@
 
 const products = [
             {
-                image: 'https://p0.meituan.net/sqs/8d16a47719052ca7b4025fe405fa6357107060.png@502w', 
-                title: '夏日元气满满套餐兑换卷*1张', 
-                mark: '幸运咖', 
-                price: 20.50, 
-                originalPrice: 25.00, 
-                link: 'http://dpurl.cn/guzcNXmz', 
+                image: 'https://p0.meituan.net/sqs/a3d6e5e37b6ad837f09aa5b52b1ba74b117466.jpg@502w', 
+                title: '霸气西瓜兑换券*1张', 
+                mark: '【奈雪的茶】热销5千+, 低至6.2折 ', 
+                price: 9.90, 
+                originalPrice: 16.00, 
+                link: 'http://dpurl.cn/5B0ueXaz', 
             },
             {
                 image: 'https://p0.meituan.net/sqs/679d22d745a6ccc32bb8aeb60ea1b2b7491207.png@502w', 
                 title: '生椰拿铁瑞幸咖啡兑换券*1张', 
-                mark: '【瑞幸咖啡】, 热销1万+, 低至4折', 
+                mark: '【瑞幸咖啡】热销1万+, 低至4折', 
                 price: 12.90, 
                 originalPrice: 32.00, 
-                link: 'http://dpurl.cn/ebNDswbz', 
+                link: 'http://dpurl.cn/lqkjlV3z', 
             },
             {
-                image: 'https://p0.meituan.net/sqs/679d22d745a6ccc32bb8aeb60ea1b2b7491207.png@502w', 
-                title: '生椰拿铁瑞幸咖啡兑换券*1张', 
-                mark: '【瑞幸咖啡】, 热销1万+, 低至4折', 
-                price: 12.90, 
-                originalPrice: 32.00, 
-                link: 'http://dpurl.cn/ebNDswbz', 
+                image: 'https://p0.meituan.net/sqs/9256e5bc74413c52662c83ece1447d8c344195.png@502w', 
+                title: '"芒"里偷闲"莓"烦恼兑换券*1张', 
+                mark: '【蜜雪冰城】热销7千+, 低至6折', 
+                price: 15.60, 
+                originalPrice: 26.00, 
+                link: 'http://dpurl.cn/icbWfuuz', 
             },
-    {
-                image: 'https://p0.meituan.net/sqs/679d22d745a6ccc32bb8aeb60ea1b2b7491207.png@502w', 
-                title: '生椰拿铁瑞幸咖啡兑换券*1张', 
-                mark: '【瑞幸咖啡】, 热销1万+, 低至4折', 
-                price: 12.90, 
-                originalPrice: 32.00, 
-                link: 'http://dpurl.cn/ebNDswbz', 
+            {
+                image: 'https://p0.meituan.net/sqs/4080cb309b5bb6fae2a8a489114e3c97409190.jpg@502w', 
+                title: '外送欢乐桶兑换券*1张', 
+                mark: '【麦当劳麦乐送（直营）】热销6千+, 低至4.2折', 
+                price: 58.00, 
+                originalPrice: 137.00, 
+                link: 'http://dpurl.cn/cmpzU0dz', 
             },
-            
+            {
+                image: 'https://p1.meituan.net/sqs/75e97f2d34123284ceb4bd10a77304d9212180.png@502w', 
+                title: '【秒杀】香辣鸡腿堡兑换券*1张', 
+                mark: '【华莱士】热销4千+, 低至0.7折', 
+                price: 1.00, 
+                originalPrice: 13.80, 
+                link: 'http://dpurl.cn/eJlij6Pz', 
+            },
+            {
+                image: 'https://p1.meituan.net/sqs/361aacad5b791ba331fa90468a31e468442543.jpg@502w', 
+                title: '杨枝甘露轻盈版兑换券*1张', 
+                mark: '【古茗】热销3千+, 低至5.7折', 
+                price: 10.90, 
+                originalPrice: 19.00, 
+                link: 'http://dpurl.cn/lXV7Wmez', 
+            },
+            {
+                image: 'https://p1.meituan.net/sqs/e5e066f253ae4c86720552432fdaf1e3300950.jpg@502w', 
+                title: '多肉杨梅兑换券*3张', 
+                mark: '【甜啦啦】热销1千+, 低至7折', 
+                price: 14.70, 
+                originalPrice: 21.00, 
+                link: 'http://dpurl.cn/um6jeAxz', 
+            },
+            {
+                image: 'https://p1.meituan.net/sqs/e855b0a86210ac89a93f234d80a04ccd661257.jpg@502w', 
+                title: '茶百道双杯酒酿套餐兑换券*1张', 
+                mark: '【茶百道】低至6.9折, 活动马上结束，手慢无！', 
+                price: 24.80, 
+                originalPrice: 36.00, 
+                link: 'http://dpurl.cn/aXwR32lz', 
+            },
+            {
+                image: 'https://p1.meituan.net/sqs/7187469b2a74a0f0de2a77db4694e05956036.jpg@502w', 
+                title: '经典双人牛排套餐兑换券*1张', 
+                mark: '【豪客来牛排】低至5.4折', 
+                price: 79.00, 
+                originalPrice: 145.00, 
+                link: 'http://dpurl.cn/lVHWXRDz', 
+            },
+            {
+                image: 'https://p0.meituan.net/sqs/cdc7630da42ce85bc0cf9d1b582282de337757.png@502w', 
+                title: '清爽一夏套餐兑换券*1张', 
+                mark: '【蜜雪冰城】低至7折', 
+                price: 14.70, 
+                originalPrice: 21.00, 
+                link: 'http://dpurl.cn/bjDdgicz', 
+            },
+            {
+                image: 'https://p1.meituan.net/sqs/72b25470ce437afc53db573a69d6bef4136826.jpg@502w', 
+                title: '德克士招牌脆皮手枪腿套餐兑换券*1张', 
+                mark: '【德克士】低至7.7折', 
+                price: 29.90, 
+                originalPrice: 39.00, 
+                link: 'http://dpurl.cn/UPmGeiOz', 
+            },
+            {
+                image: 'https://p1.meituan.net/sqs/7f047fe64b5bc956136376d98a56c82f90771.jpg@502w', 
+                title: '栀子绿生椰奶茶兑换券*2张', 
+                mark: '【奈雪的茶】低至8.1折', 
+                price: 25.90, 
+                originalPrice: 32.00, 
+                link: 'http://dpurl.cn/95wKf6ez', 
+            },
+            // 限周六
+            {
+                image: 'https://p1.meituan.net/sqs/20ab6b49902d930f38efea9985a4d67f29084.jpg@502w', 
+                title: '秘汁全鸡-暑期加道菜兑换券*1张', 
+                mark: '【肯德基宅急送正式】低至5折, 活动马上结束，手慢无！', 
+                price: 19.90, 
+                originalPrice: 39.80, 
+                link: 'http://dpurl.cn/2mfv4jXz', 
+            },
+            // 限周六
+            {
+                image: 'https://p1.meituan.net/sqs/c4b547b85ae93d9497f0310c62075afb90132.png@502w', 
+                title: '吉祥三堡分享餐（商品券）兑换券*1张', 
+                mark: '【汉堡王】低至4.2折, 活动马上结束，手慢无！', 
+                price: 59.90, 
+                originalPrice: 143.50, 
+                link: 'http://dpurl.cn/hilQ6Ahz', 
+            },
+            {
+                image: 'https://p1.meituan.net/sqs/918d027acfdb585bbe97b4f8452b1955335104.jpg@502w', 
+                title: '巨无霸薯条四件套兑换券*1张', 
+                mark: '【麦当劳麦乐送（直营）】低至4.4折', 
+                price: 29.90, 
+                originalPrice: 68.00, 
+                link: 'http://dpurl.cn/cSDHTLAz', 
+            },
+            {
+                image: 'https://p0.meituan.net/sqs/ce9da83b0992520c9380c9bba44db05234283.jpg@502w', 
+                title: '新奥尔良鸡排饭套餐兑换券*1张', 
+                mark: '【豪客来牛排】热销2千+, 低至5.1折', 
+                price: 19.90, 
+                originalPrice: 39.00, 
+                link: 'http://dpurl.cn/8ekPKTXz', 
+            },
+            {
+                image: 'https://p0.meituan.net/sqs/5b1b595081beccc1fb14eeb9c9e27174778566.jpg@502w', 
+                title: '超A芝士葡萄（大）兑换券*1张', 
+                mark: '【古茗】热销2千+, 低至6.5折', 
+                price: 12.90, 
+                originalPrice: 20.00, 
+                link: 'http://dpurl.cn/2h2AXubz', 
+            },
+            {
+                image: 'https://p1.meituan.net/sqs/645f552092aeaed252a264f4e684e2ad734454.jpg@502w', 
+                title: '超A芝士桃桃兑换券*1张', 
+                mark: '【古茗】热销1千+, 低至6.5折', 
+                price: 12.90, 
+                originalPrice: 20.00, 
+                link: 'http://dpurl.cn/egVlgApz', 
+            },
+            {
+                image: 'https://p0.meituan.net/sqs/57146bd3fafda390591f151404605bc0117932.jpg@502w', 
+                title: '水果吨吨桶兑换券*1张', 
+                mark: '【CoCo都可全国】低至7.4折', 
+                price: 14.00, 
+                originalPrice: 19.00, 
+                link: 'http://dpurl.cn/AdhNmH5z', 
+            },
+            {
+                image: 'https://p0.meituan.net/sqs/2a2badc91646f7979fc0d713797dc45b47625.jpg@502w', 
+                title: '茉莉初雪奶茶兑换券*1张', 
+                mark: '【奈雪的茶】低至6.3折', 
+                price: 10.10, 
+                originalPrice: 16.00, 
+                link: 'http://dpurl.cn/eRN5oTJz', 
+            },
+            {
+                image: 'https://p0.meituan.net/sqs/a6cc676155cf1ba86e58c6421814356a55739.jpg@502w', 
+                title: '经典麦辣三件套兑换券*1张', 
+                mark: '【麦当劳麦乐送（直营）】低至4.9折', 
+                price: 23.90, 
+                originalPrice: 48.50, 
+                link: 'http://dpurl.cn/PNFjl6oz', 
+            },
+            {
+                image: 'https://p0.meituan.net/sqs/9a4f3cb6340d0eae8753626c4871188337117.jpg@502w', 
+                title: '黑椒雪花牛肉粒炒饭套餐兑换券*1张', 
+                mark: '【豪客来牛排】低至6.6折', 
+                price: 29.90, 
+                originalPrice: 45.00, 
+                link: 'http://dpurl.cn/kqRYAV3z', 
+            },
+            {
+                image: 'https://p1.meituan.net/sqs/9c097f8db531b3aef879cd6654349a15417451.jpg@502w', 
+                title: '百香双重奏兑换券*1张', 
+                mark: '【古茗】低至6.8折', 
+                price: 9.50, 
+                originalPrice: 14.00, 
+                link: 'http://dpurl.cn/MBjczV6z', 
+            },
+            {
+                image: 'https://p0.meituan.net/sqs/5b224cef8bd00a75e0c3cc6f3bf5649444254.jpg@502w', 
+                title: '嫩牛明星四件套（券)兑换券*1张', 
+                mark: '肯德基宅急送正式, 低至6折', 
+                price: 33.50, 
+                originalPrice: 55.50, 
+                link: 'http://dpurl.cn/80anaVAz', 
+            },
+            {
+                image: 'https://p1.meituan.net/sqs/b6f9fe85b490606e3ddc3d570895ffdf154698.jpg@502w', 
+                title: '芒芒雪山1磅生日蛋糕兑换券*1张', 
+                mark: '【幸福西饼】低至6.5折 ', 
+                price: 109.90, 
+                originalPrice: 168.00, 
+                link: 'http://dpurl.cn/KL6I62yz', 
+            },
+            {
+                image: 'https://p1.meituan.net/sqs/2181617ec961a370563b47742906148b156072.jpg@502w', 
+                title: '榴芒双拼千层8英寸兑换券*1张', 
+                mark: '【幸福西饼】低至5折', 
+                price: 79.90, 
+                originalPrice: 159.00, 
+                link: 'http://dpurl.cn/3NdDOjhz', 
+            },
         ];
 
         // 获取商品列表的DOM元素
