@@ -1,1 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>商品列表</title>
+    <style>
+        body {
+            background-color: #f6f6f6; /* 背景色为白色，可以根据需要修改颜色值 */
+        }
+        h1 {
+            color: #fb4d44;
+            margin-left: 10px;
+        }
+        a {
+            text-decoration: none;
+            font-size: medium;
+        }
+        .card {
+            display: flex;
+            flex-direction: row;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+            background-color: #fff;
+
+        }
+        .image {
+            /* flex: 1; */
+            margin-right: 10px;
+            width: 100px;
+            height: 100px;
+        }
+        .info {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+
+        }
+        .top-element {
+            align-self: flex-start; /* 将上方元素靠上 */
+        }
+  
+        .middle-element {
+            flex-grow:inherit; /* 中间元素自适应填充剩余空间 */
+        }
+  
+        .bottom-element {
+         align-self: flex-end; /* 将下方元素靠下 */
+        }
+        .title {
+            font-size: large;
+            margin-bottom: 5px;
+        }
+        .brand {
+            font-size: smaller;
+            color: #656565;
+        }
+        .price-button-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .price-container {
+            display: flex;
+            align-items: baseline;
+            flex: 1;
+            font-size: xx-large;
+            color: #fb4d44;
+
+        }
+        .original-price {
+            text-decoration: line-through;
+            font-size: small;
+            color: #adadad;
+        }
+        .money-mark {
+            text-decoration: line-through;
+            font-size: large;
+            color: #fb4d44;
+            margin-right: 5px;
+
+        }
+        .original-money-mark {
+            text-decoration: line-through;
+            margin-left: 10px;
+            margin-right: 2px;
+            font-size: small;
+            color: #adadad;
+        }
+        .buy-button {
+            padding: 5px 10px;
+            background-color: #fed06a;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+<body>
     <h1>美团超级券包精选</h1>
+    <div id="productList"></div>
+    <script>
+
+// 商品数组，包含标题和价格信息
+
+const products = [
+            {
+                image: 'https://p0.meituan.net/sqs/8d16a47719052ca7b4025fe405fa6357107060.png@502w', 
+                title: '夏日元气满满套餐兑换卷*1张', 
+                mark: '幸运咖', 
+                price: 20.50, 
+                originalPrice: 25.00, 
+                link: 'http://dpurl.cn/guzcNXmz', 
+            },
+            {
+                image: 'https://p0.meituan.net/sqs/679d22d745a6ccc32bb8aeb60ea1b2b7491207.png@502w', 
+                title: '生椰拿铁瑞幸咖啡兑换券*1张', 
+                mark: '【瑞幸咖啡】, 热销1万+, 低至4折', 
+                price: 12.90, 
+                originalPrice: 32.00, 
+                link: 'http://dpurl.cn/ebNDswbz', 
+            },
+            
+        ];
+
+        // 获取商品列表的DOM元素
+        const productList = document.getElementById('productList');
+
+        // 遍历商品数组，为每个商品创建一个列表项并添加到商品列表中
+        products.forEach(product => {
+            const card = document.createElement('div');
+            card.className = 'card';
+
+            card.innerHTML += `
+        <img class="image" src="${product.image}" alt="商品图片">
+        <div class="info">
+            <div class="top-element">
+            <div class="title">${product.title}</div>
+            <div class="brand">${product.mark}</div>
+        </div>
+        <div class="middle-element">
+        </div>
+        <div class="info">
+            <div class="price-button-container">
+                <div class="price-container">
+                    <span class="money-mark">¥</span>
+                    <span class="discount-price">${product.price}</span>
+                    <span class="original-money-mark">¥</span>
+                    <span class="original-price">${product.originalPrice}</span>
+                </div>
+                <a class="buy-button" href="${product.link}">立即购买</a>
+            </div>
+        </div>
+        </div>
+    `
+        productList.appendChild(card);
+
+        });
+    </script>
+</body>
+</html>
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品列表</title>
+    <style>
+        .product-card {
+            width: 200px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+        .product-card .title {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .product-card .price {
+            color: #009966;
+        }
+    </style>
+</head>
+<body>
+    <h1>商品列表</h1>
+    <div id="productList"></div>
+
+    <script>
+        // 商品数组，每一个对象包含了商品的标题，价格，和图片URL
+        const products = [
+            { title: '商品1', price: 100, img: 'imageURL1' },
+            { title: '商品2', price: 200, img: 'imageURL2' },
+            { title: '商品3', price: 300, img: 'imageURL3' },
+            { title: '商品4', price: 400, img: 'imageURL4' },
+            { title: '商品5', price: 500, img: 'imageURL5' }
+        ];
+
+        // 获取商品列表的DOM元素
+        const productList = document.getElementById('productList');
+
+        // 遍历商品数组，为每个商品创建一个卡片并添加到商品列表中
+        products.forEach(product => {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            card.innerHTML = '<img src="' + product.img + '" alt="' + product.title + '"><div class="title">' + product.title + '</div><div class="price">价格：' + product.price + ' 元</div>';
+            productList.appendChild(card);
+        });
+    </script>
+</body>
+</html> -->
