@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>商品列表</title>
+    <title>美团券包</title>
     <style>
         body {
             background-color: #f6f6f6; /* 背景色为白色，可以根据需要修改颜色值 */
         }
         h1 {
             color: #fb4d44;
-            margin-left: 10px;
+            margin-left: 16px;
+            font-size: 72px;
+
         }
         a {
             text-decoration: none;
-            font-size: medium;
+            font-size: 48px;
         }
         .card {
             display: flex;
             flex-direction: row;
             border-radius: 10px;
-            margin: 10px;
-            padding: 10px;
+            margin: 16px;
             background-color: #fff;
 
         }
         .image {
             /* flex: 1; */
-            margin-right: 10px;
-            width: 100px;
-            height: 100px;
+            /* margin-right: 10px; */
+            width: 360px;
+            height: 360px;
         }
         .info {
             flex: 2;
@@ -47,34 +48,40 @@
          align-self: flex-end; /* 将下方元素靠下 */
         }
         .title {
-            font-size: large;
-            margin-bottom: 5px;
+            font-size: 42px;
+            margin-top: 16px;
+            margin-left: 16px;
+            margin-right: 10px;
+
         }
         .brand {
-            font-size: smaller;
+            font-size: 32px;
+            margin: 16px;
             color: #656565;
         }
         .price-button-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            margin: 16px;
+
         }
         .price-container {
             display: flex;
             align-items: baseline;
             flex: 1;
-            font-size: xx-large;
+            font-size: 72px;
             color: #fb4d44;
 
         }
         .original-price {
             text-decoration: line-through;
-            font-size: small;
+            font-size: 36px;
             color: #adadad;
         }
         .money-mark {
             text-decoration: line-through;
-            font-size: large;
+            font-size: 42px;
             color: #fb4d44;
             margin-right: 5px;
 
@@ -83,11 +90,11 @@
             text-decoration: line-through;
             margin-left: 10px;
             margin-right: 2px;
-            font-size: small;
+            font-size: 36px;
             color: #adadad;
         }
         .buy-button {
-            padding: 5px 10px;
+            padding: 15px 20px;
             background-color: #fed06a;
             color: black;
             border: none;
@@ -160,59 +167,3 @@ const products = [
     </script>
 </body>
 </html>
-
-<!-- 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商品列表</title>
-    <style>
-        .product-card {
-            width: 200px;
-            border: 1px solid #ccc;
-            margin-bottom: 10px;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-        .product-card img {
-            width: 100%;
-            height: auto;
-        }
-        .product-card .title {
-            font-size: 16px;
-            margin: 10px 0;
-        }
-        .product-card .price {
-            color: #009966;
-        }
-    </style>
-</head>
-<body>
-    <h1>商品列表</h1>
-    <div id="productList"></div>
-
-    <script>
-        // 商品数组，每一个对象包含了商品的标题，价格，和图片URL
-        const products = [
-            { title: '商品1', price: 100, img: 'imageURL1' },
-            { title: '商品2', price: 200, img: 'imageURL2' },
-            { title: '商品3', price: 300, img: 'imageURL3' },
-            { title: '商品4', price: 400, img: 'imageURL4' },
-            { title: '商品5', price: 500, img: 'imageURL5' }
-        ];
-
-        // 获取商品列表的DOM元素
-        const productList = document.getElementById('productList');
-
-        // 遍历商品数组，为每个商品创建一个卡片并添加到商品列表中
-        products.forEach(product => {
-            const card = document.createElement('div');
-            card.className = 'product-card';
-            card.innerHTML = '<img src="' + product.img + '" alt="' + product.title + '"><div class="title">' + product.title + '</div><div class="price">价格：' + product.price + ' 元</div>';
-            productList.appendChild(card);
-        });
-    </script>
-</body>
-</html> -->
