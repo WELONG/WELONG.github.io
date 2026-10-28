@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="What Подписки и счета stores on your device, how files, reminders and widgets work, and how to delete your data.">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>Подписки и счета — Privacy Policy</title>
+<link rel="canonical" href="https://welong.github.io/subtrack/privacy/en.html">
+<link rel="alternate" hreflang="ru" href="https://welong.github.io/subtrack/privacy/">
+<link rel="alternate" hreflang="en" href="https://welong.github.io/subtrack/privacy/en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://welong.github.io/subtrack/privacy/zh-CN.html">
+<style>:root{color-scheme:light dark;--background:#fff;--text:#202124;--muted:#64676d;--link:#185abc}
+*{box-sizing:border-box}html{font-size:16px}body{margin:0;background:var(--background);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;overflow-wrap:anywhere;word-break:normal;hyphens:auto}
+main{max-width:760px;margin:0 auto;padding:24px 20px 48px}a{color:var(--link);text-underline-offset:.15em}a:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+nav{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 18px;font-size:.9rem}nav a{display:inline-flex;align-items:center;min-height:44px}nav a[aria-current=page]{color:inherit;text-decoration:none}
+h1{font-size:clamp(1.5rem,5vw,2rem);line-height:1.3;margin:0 0 8px}h2{font-size:1.2rem;line-height:1.4;margin:26px 0 10px}p{margin:0 0 12px}ul{margin:0 0 12px;padding-left:22px}li{margin:0 0 8px}.date{font-size:.875rem;color:var(--muted);margin:0 0 22px}
+@media(prefers-color-scheme:dark){:root{--background:#111;--text:#e9e9e9;--muted:#b2b2b2;--link:#9cbfff}}
+@media print{body{background:#fff;color:#111}main{max-width:none;padding:0}nav{display:none}a{color:inherit}h2{break-after:avoid}p,li{orphans:3;widows:3}}</style>
+</head>
+<body>
+<main>
+<nav aria-label="Language"><a href="./" lang="ru" hreflang="ru">Русский</a><a href="en.html" lang="en" hreflang="en" aria-current="page">English</a><a href="zh-CN.html" lang="zh-CN" hreflang="zh-CN">简体中文</a></nav>
+<h1>Подписки и счета — Privacy Policy</h1>
+<p class="date">Effective date: <time datetime="2026-10-28">October 28, 2026</time></p>
+<p>Подписки и счета is an Android app for tracking subscriptions and recurring bills, a payment calendar, local reminders and widgets. This policy describes data use in the app and, separately, when you visit this web page.</p>
+<section aria-labelledby="offline"><h2 id="offline">1. Operation without a server</h2>
+<p>The app works without registration or a connection to a developer-operated server. It has no Internet permission, advertising, in-app purchases, analytics SDKs, payment SDKs or RuStore review SDK. The app does not send your records or app-usage information to the developer.</p>
+<p>The app does not connect to banks, mobile carriers or stores to retrieve purchases, make charges or cancel subscriptions. Service names, payment sources and accounts are information you enter or import.</p>
+</section>
+<section aria-labelledby="local-data"><h2 id="local-data">2. Data on your device and its purposes</h2>
+<p>The app&#x27;s private storage contains:</p>
+<ul><li>Subscription and bill records: names, amounts or an indication that an amount is unknown, currencies, recurrence, payment, end, trial and cancellation dates, record status, category, icon, payment channel, notes, links and reminder settings.</li><li>Paid and skipped payment history, actual amounts and dates, payment notes, price-change history and future prices you have entered.</li><li>Payment-source names and types, optional last four card or phone digits, and service account or customer-number text, such as a login or email address. An actual payment can keep a separate snapshot of its source, last digits, account and payment channel.</li><li>Language, theme, hidden-amount settings, income days, widget settings, local reminder bookkeeping and the selected CSV encoding.</li></ul>
+<p>This information is used to display your records, calendar, calculations and statistics by currency, payments until payday, reminders, widgets and imports or exports you choose. It is not used for advertising or profiling.</p>
+<p>The app does not need a full bank-card number, CVV/CVC or password. Do not enter them in names, notes or account fields. You may leave the last four card or phone digits blank.</p>
+</section>
+<section aria-labelledby="files"><h2 id="files">3. Import, export and backups</h2>
+<p>Android&#x27;s system file picker is used to select and save files. The app reads a file you select or CSV text explicitly shared with it from another app. CSV contents are temporarily copied into a private cache for preview and encoding selection; working copies are deleted when the preview is dismissed or import succeeds. Android may also clear the cache.</p>
+<p>A JSON backup contains records, payment and price history, future prices, the payment-source catalog and the main settings: language, theme, hidden amounts and income days. It does not include individual widget settings, reminder scheduler bookkeeping or the CSV cache. CSV exports contain record and payment rows, including notes, source names, last digits and accounts. These files are ordinary text and are not encrypted by the app itself.</p>
+<p>JSON can be restored by merging or replacing the database. Replacement deletes the current database contents and writes the selected backup. Adding from CSV creates only new records after preview; it does not restore payment or price-change history.</p>
+<p>You choose the save location and document provider. A provider, such as a cloud drive, may upload or synchronize selected files under its own rules independently of the app. Exported copies are not removed when a record or the app is deleted; you manage them separately.</p>
+</section>
+<section aria-labelledby="permissions"><h2 id="permissions">4. Reminders and Android permissions</h2>
+<ul><li>Reminders are calculated on the device. Android 13 and later request notification permission. Record keeping, the calendar and statistics remain available without it.</li><li>Exact-alarm and full-screen notification access are used for the timing and display of alarm reminders where Android permits. Permissions and settings depend on the system version; you choose whether to enable the alarm reminder.</li><li>A foreground service with a notification plays the alarm sound, and a separate permission supports vibration. This does not record sound: the app does not request microphone access. You can stop the sound; playback is limited to two minutes.</li><li>System events for restarts and date, time and time-zone changes restore reminder schedules and refresh widgets. The app does not request access to contacts, SMS, call logs, location, the camera or the entire file storage.</li></ul>
+<p>Reminder delivery depends on Android and device settings. Dismissing, stopping or snoozing a reminder does not confirm payment: an actual payment is recorded only by your action.</p>
+</section>
+<section aria-labelledby="visibility"><h2 id="visibility">5. Information visible in notifications and widgets</h2>
+<p>Names, dates and amounts may appear in notifications, full-screen reminders and home-screen widgets. Private notification visibility is requested, but lock-screen display also depends on Android settings. Widgets pass a rendered image containing record data to the launcher app on your device.</p>
+<p>Hiding amounts masks numeric amounts in the relevant interface; it does not delete data or hide names or dates. Widgets have their own hidden-amount settings, which you should check separately. This setting does not encrypt the database or exported files.</p>
+</section>
+<section aria-labelledby="external"><h2 id="external">6. External links and other apps</h2>
+<p>When you choose an action, a service website, subscription management, receipt history or this policy may open in a browser or another app. The destination address is passed to it, including a link you entered yourself. The subscription and payment database is not automatically attached to the link.</p>
+<p>External websites, stores, document providers and email services may use the Internet and process data under their own rules. Actions and information you enter in those services are governed by their terms and policies.</p>
+</section>
+<section aria-labelledby="retention"><h2 id="retention">7. Retention, changes and deletion</h2>
+<p>Local data remains while you use it or until you delete it. You can edit and delete records in the app. Deleting a subscription or bill removes its related payment and price-change history; an individual payment status can also be undone.</p>
+<p>Archiving a record or payment source is not deletion. Renaming or archiving a source does not rewrite snapshots of already saved actual payments. If information is no longer needed, edit the relevant payment, undo its status or delete the associated record.</p>
+<p>Clearing app data in Android settings or fully uninstalling the app with its data removes the private database, settings and cache. The app does not create a server copy for the developer. Exported files, copies held by a document provider and emails you sent must be deleted separately.</p>
+<p>Automatic Android backup and data transfer are disabled by the app&#x27;s configuration. You can transfer data between devices using JSON export and import that you choose. We do not promise recovery of deleted data or guaranteed physical erasure of storage media.</p>
+</section>
+<section aria-labelledby="website"><h2 id="website">8. This web page</h2>
+<p>This policy is hosted on GitHub Pages. When you visit, GitHub logs the visitor&#x27;s IP address for security. See <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection" rel="noreferrer">GitHub Pages data collection</a> and the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noreferrer">GitHub Privacy Statement</a>.</p>
+<p>This applies to website visits, not offline app operation. The page cannot access your record database. We add no analytics, advertising, external fonts, scripts or our own cookies to this page.</p>
+</section>
+<section aria-labelledby="changes"><h2 id="changes">9. Policy changes</h2>
+<p>Updated versions are published at this address with a new date. If data processing changes, we will update its description and request consent where required.</p>
+</section>
+<section aria-labelledby="contact"><h2 id="contact">10. Contact the developer</h2>
+<p>Developer display name: Yuan. For privacy questions, email <a href="mailto:apwelong@gmail.com" rel="noreferrer">apwelong@gmail.com</a>. The developer receives your sender address, message and only the attachments you choose to send; the app database is not automatically attached.</p>
+<p>Correspondence is used to respond to and address your request and is retained while needed for those purposes or applicable obligations. You may use the same address to ask about deleting correspondence. Local app records are deleted on your device without contacting the developer.</p>
+</section>
+</main>
+</body>
+</html>
